@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Kartu Ucapan Idul Fitri 1447 H</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', 'Segoe UI', system-ui, -apple-system, 'Roboto', sans-serif;
+            background: linear-gradient(145deg, #0b3b2f 0%, #1b4d3a 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 24px;
+            position: relative;
+        }
+
+        /* Dekorasi latar belakang islami */
+        body::before {
+            content: "☾";
+            font-size: 220px;
+            color: rgba(255, 215, 150, 0.08);
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            font-family: monospace;
+            pointer-events: none;
+            rotate: -15deg;
+        }
+
+        body::after {
+            content: "★";
+            font-size: 180px;
+            color: rgba(255, 210, 110, 0.07);
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            pointer-events: none;
+            font-family: monospace;
+        }
+
+        /* Container utama kartu */
+        .card-container {
+            max-width: 520px;
+            width: 100%;
+            background: #fffef7;
+            border-radius: 64px 48px 64px 48px;
+            box-shadow: 0 30px 40px -20px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(210, 180, 120, 0.3);
+            overflow: hidden;
+            transition: transform 0.25s ease, box-shadow 0.3s;
+            backdrop-filter: blur(0px);
+        }
+
+        .card-container:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 40px 50px -20px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Area foto */
+        .photo-area {
+            width: 100%;
+            background: #f5efe3;
+            padding: 28px 28px 12px 28px;
+            display: flex;
+            justify-content: center;
+            border-bottom: 2px dashed #e9dbbc;
+        }
+
+        .frame-photo {
+            background: white;
+            padding: 12px 12px 8px 12px;
+            border-radius: 36px;
+            box-shadow: 0 12px 18px -8px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            transform: rotate(0.5deg);
+            transition: all 0.2s;
+        }
+
+        .photo {
+            width: 100%;
+            max-width: 380px;
+            height: auto;
+            border-radius: 28px;
+            display: block;
+            object-fit: cover;
+            aspect-ratio: 1 / 0.9;
+            box-shadow: inset 0 0 0 1px rgba(0,0,0,0.05);
+            transition: 0.2s;
+        }
+
+        /* contoh jika ingin mengganti foto dengan gambar stok, pakai unsplash atau lokal */
+        /* pada kode ini saya gunakan gambar gratis dari placeholder dengan nuansa islami */
+
+        /* konten kata-kata */
+        .greeting-content {
+            padding: 32px 32px 42px 32px;
+            text-align: center;
+        }
+
+        .arabic {
+            font-family: 'Amiri', 'Times New Roman', 'Traditional Arabic', serif;
+            font-size: 1.9rem;
+            color: #b46b3c;
+            margin-bottom: 18px;
+            letter-spacing: 2px;
+            font-weight: 500;
+        }
+
+        .main-message {
+            font-size: 1.65rem;
+            font-weight: 600;
+            color: #2b5e3b;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .sub-message {
+            font-size: 1rem;
+            color: #7c5e3a;
+            background: #fef7e6;
+            display: inline-block;
+            padding: 8px 18px;
+            border-radius: 40px;
+            margin: 12px 0 8px 0;
+            font-weight: 500;
+        }
+
+        .divider {
+            width: 70px;
+            height: 2px;
+            background: linear-gradient(90deg, #e2c28b, #b98f4b, #e2c28b);
+            margin: 20px auto;
+            border-radius: 4px;
+        }
+
+        .long-text {
+            font-size: 1rem;
+            line-height: 1.55;
+            color: #3f3a2b;
+            margin: 16px 0 8px 0;
+            font-weight: 450;
+        }
+
+        .quote {
+            font-style: italic;
+            background: #faf3e0;
+            padding: 14px 16px;
+            border-radius: 32px;
+            margin: 20px 0 12px;
+            color: #6a4c2c;
+            font-size: 0.95rem;
+            border-left: 4px solid #dba35a;
+        }
+
+        .btn-copy {
+            background: none;
+            border: 1.5px solid #dbb067;
+            padding: 10px 20px;
+            border-radius: 60px;
+            font-family: inherit;
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: #946b38;
+            cursor: pointer;
+            transition: 0.2s;
+            margin-top: 16px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #fffcf5;
+        }
+
+        .btn-copy:hover {
+            background: #e9dbbc;
+            color: #5c3e1f;
+            border-color: #b57c2e;
+        }
+
+        /* footer */
+        .card-footer {
+            background: #fcf8ef;
+            padding: 16px 28px 24px;
+            text-align: center;
+            border-top: 1px solid #f0e5d0;
+            font-size: 0.75rem;
+            color: #b2864b;
+        }
+
+        /* untuk mode sentuh dan responsif */
+        @media (max-width: 550px) {
+            body {
+                padding: 16px;
+            }
+            .greeting-content {
+                padding: 24px 22px 32px;
+            }
+            .main-message {
+                font-size: 1.4rem;
+            }
+            .arabic {
+                font-size: 1.5rem;
+            }
+            .photo-area {
+                padding: 20px 20px 8px 20px;
+            }
+        }
+
+        /* efek shimmer untuk elegan */
+        @keyframes softGlow {
+            0% { text-shadow: 0 0 0px rgba(218,165,32,0);}
+            100% { text-shadow: 0 0 4px rgba(218,165,32,0.2);}
+        }
+        .main-message {
+            animation: softGlow 2s infinite alternate;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card-container">
+    <!-- Area Foto -->
+    <div class="photo-area">
+        <div class="frame-photo">
+            <img class="photo" 
+                 src="WhatsApp Image 2026-03-20 at 16.23.52.jpeg" 
+                 alt="WhatsApp Image 2026-03-20 at 16.23.52">
+        </div>
+    </div>
+
+    <!-- Konten Kata-Kata di Bawah Foto -->
+    <div class="greeting-content">
+        <div class="arabic">
+            تَقَبَّلَ اللَّهُ مِنَّا وَمِنْكُمْ
+        </div>
+        <div class="main-message">
+            ✨ Mohon Maaf Lahir & Batin ✨
+        </div>
+        <div class="sub-message">
+            Idul Fitri 1447 Hijriah
+        </div>
+        <div class="divider"></div>
+        <div class="long-text">
+            Kemenangan setelah sebulan menahan lapar dan haus bukan hanya tentang menahan diri, 
+            tetapi tentang hati yang kembali suci. Di hari yang fitri ini, aku pribadi mengucapkan 
+            <strong>Selamat Hari Raya Idul Fitri</strong>, semoga kebahagiaan menyertai langkah kita berdua selalu.
+        </div>
+        <div class="quote">
+            "Bersihkan hati dari dendam, maafkan segala salah, dan sambut hari penuh keberkahan. 
+            Selamat Lebaran, semoga cinta dan kasih sayang selalu mengelilingi keluarga kita."
+        </div>
+
+        <!-- Kata-kata pilihan lain jika pengguna ingin inspirasi (tampil sebagai variasi) -->
+        <div style="margin: 18px 0 8px; font-size: 0.85rem; background: #FCF3E0; padding: 8px 12px; border-radius: 40px;">
+            🌙 minal aidin wal faizin | 🌟 Happy Eid Mubarak
+        </div>
+
+        <!-- tombol copy kalimat agar bisa dipakai pengguna -->
+        <button class="btn-copy" id="copyMessageBtn">
+            📋 Salin ucapan untuk status
+        </button>
+        <p style="font-size: 11px; margin-top: 12px; opacity: 0.6;">Klik tombol untuk menyalin teks ucapan</p>
+    </div>
+
+    <div class="card-footer">
+        🌙 Taqabbalallahu minna wa minkum, shiyamana wa shiyamakum 🌙
+    </div>
+</div>
+
+<script>
+    (function() {
+        // Kumpulan variasi kata-kata yang bisa disalin user
+        const messageOptions = [
+            "Maaf lahir dan batin. Semoga fitri membawa kita pada kedamaian hati. ✨ Selamat Idul Fitri 1447 H.",
+            "Lebaran bukan hanya tentang baju baru, tapi tentang hati yang baru. Mohon maaf lahir dan batin. 🤍",
+            "Kembali ke fitri, kembali pada yang suci. Selamat Idul Fitri, semoga berkah selalu menyertai. 🌙",
+            "Bersama di hari yang fitri, semoga silaturahmi kita tetap terjaga. Selamat Idul Fitri untuk keluarga besar! 💕",
+            "Taqabbalallahu minna wa minkum, mohon maaf lahir dan batin. Selamat Lebaran 2026!",
+            "Secerah senyuman di foto ini, semoga hari rayamu dipenuhi kebahagiaan. Minal aidin wal faizin 🕌",
+            "Bersihkan hati, rajut kembali tali kasih. Selamat Idul Fitri, penuh cinta dan kedamaian."
+        ];
+
+        const copyBtn = document.getElementById('copyMessageBtn');
+        
+        // fungsi untuk menyalin teks ke clipboard
+        async function copyToClipboard(text) {
+            try {
+                await navigator.clipboard.writeText(text);
+                // feedback sementara
+                const originalText = copyBtn.innerHTML;
+                copyBtn.innerHTML = "✅ Tersalin!";
+                setTimeout(() => {
+                    copyBtn.innerHTML = originalText;
+                }, 2000);
+            } catch (err) {
+                console.error('Gagal menyalin: ', err);
+                alert("Tekan lama teks untuk salin secara manual 😊");
+            }
+        }
+
+        // Saat tombol diklik, pilih satu pesan secara acak dari daftar
+        copyBtn.addEventListener('click', () => {
+            const randomIndex = Math.floor(Math.random() * messageOptions.length);
+            const selectedMessage = messageOptions[randomIndex];
+            copyToClipboard(selectedMessage);
+        });
+
+        // tambahan: jika user ingin menyalin kalimat favorit dengan klik pada elemen quote?
+        const quoteElement = document.querySelector('.quote');
+        if(quoteElement) {
+            quoteElement.style.cursor = 'pointer';
+            quoteElement.addEventListener('click', () => {
+                let quoteText = quoteElement.innerText.trim();
+                copyToClipboard(quoteText);
+            });
+        }
+
+        // event untuk meng-handle error image jika unsplash gagal
+        const imgPhoto = document.querySelector('.photo');
+        if(imgPhoto && imgPhoto.complete && imgPhoto.naturalWidth === 0) {
+            imgPhoto.src = "https://placehold.co/600x500/EADAA8/8B5A2B?text=Selamat+Idul+Fitra&font=poppins";
+        }
+        imgPhoto.addEventListener('error', function() {
+            this.src = "https://placehold.co/600x500/FDEACB/A5582C?text=Keluarga+Bahagia+Eid+Mubarak&font=poppins";
+        });
+    })();
+</script>
+</body>
+</html>
